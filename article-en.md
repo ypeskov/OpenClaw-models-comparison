@@ -1,4 +1,4 @@
-# I Tested 8 AI Models as Autonomous Agents. Most Failed a Simple 4-Step Task.
+# I Tested 8 AI Models as Autonomous Agents. Half Have Failed a Simple 4-Step Task.
 
 With all the hype around the new OpenClaw agent, I decided to take it for a spin. During setup, the recommended Opus 4.5 burned through $125 (plus VAT) in 2 days. That's... unpleasant. If left unchecked, it'll bankrupt you. And it confirms what others have noticed: OpenClaw consumes context in industrial doses.
 
