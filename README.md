@@ -1,7 +1,7 @@
 # AI Agent Field Report: 8 Models, 1 Task, Real Results
 
 This is a practical **engineering field report**, not a scientific benchmark.  
-It documents hands-on testing of 8 AI models as autonomous agents in [OpenClaw](https://github.com/), a terminal-based AI agent platform.
+It documents hands-on testing of 8 AI models as autonomous agents in [OpenClaw](https://github.com/openclaw/openclaw), a terminal-based AI agent platform.
 
 The goal is to give an intuitive, experience-based understanding of how these models behave in real agent workflows.  
 Readers looking for rigor can reproduce the setup and run their own comparisons.
@@ -29,14 +29,14 @@ Readers looking for rigor can reproduce the setup and run their own comparisons.
 
 ## Detailed Model Reports
 
-- [Claude Opus 4.5](models/claude-opus-4.5.md)
-- [MiniMax M2.1](models/minimax-m2.1.md)
-- [Kimi-K2.5](models/kimi-k2.5.md)
-- [Claude Sonnet 4.5](models/claude-sonnet-4.5.md)
-- [Claude Haiku 4.5](models/claude-haiku-4.5.md)
-- [Qwen3-Coder-480B](models/qwen3-coder-480b.md)
-- [Qwen3-235B-Instruct](models/qwen3-235b-instruct.md)
-- [DeepSeek-V3.2](models/deepseek-v3.2.md)
+- [Claude Opus 4.5](claude-opus-4.5.md)
+- [MiniMax M2.1](minimax-m2.1.md)
+- [Kimi-K2.5](kimi-k2.5.md)
+- [Claude Sonnet 4.5](claude-sonnet-4.5.md)
+- [Claude Haiku 4.5](claude-haiku-4.5.md)
+- [Qwen3-Coder-480B](qwen3-coder-480b.md)
+- [Qwen3-235B-Instruct](qwen3-235b-instruct.md)
+- [DeepSeek-V3.2](deepseek-v3.2.md)
 
 ## Methodology
 
