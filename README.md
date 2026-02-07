@@ -24,6 +24,7 @@ Readers looking for rigor can reproduce the setup and run their own comparisons.
 ## Articles
 
 - [English article](article-en.md)
+- [Українська версія](article-ua.md)
 - [Русская статья](article-ru.md)
 
 ## Detailed Model Reports
