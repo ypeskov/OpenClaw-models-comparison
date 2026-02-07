@@ -108,7 +108,7 @@ Evaluated by me, with Claude Opus as co-judge.
 
 For my OpenClaw agent, **MiniMax M2.1** remains the primary model. Fast, reliable, uses tools correctly, and costs a fraction of proprietary alternatives. **Kimi-K2.5** is a strong backup. And when quality is paramount and budget doesn't matter — **Opus 4.5** is unbeatable.
 
-Detailed results for each model (exact outputs, scoring breakdowns, behavioral notes) on GitHub: [https://github.com/ypeskov/OpenClaw-models-comparison]
+Detailed results for each model (exact outputs, scoring breakdowns, behavioral notes) on: (GitHub)[https://github.com/ypeskov/OpenClaw-models-comparison]
 
 ---
 
