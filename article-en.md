@@ -32,6 +32,7 @@ Mixed-language prompt: "Write an email in English to colleague Andrey summarizin
 **Task 5: Multi-tool orchestration**
 "Search the web for model benchmarks, check Google Drive for previous test results, and create a comparison table from both sources."
 
+
 ## Task 1: What the Models Actually Did
 
 Each model received the same prompt in a clean session (no prior context):
@@ -56,20 +57,6 @@ This tests everything an agent needs: API data retrieval, processing, file creat
 
 Evaluated by me, with Claude Opus as co-judge.
 
-
-| Model | Score | Time | Cost | Email w/ Attachment | User Nudges |
-|-------|-------|------|------|:---:|:---:|
-| **Claude Opus 4.5** | **9.5** | 25 sec | ~$0.43 | ✅ | 0 |
-| **MiniMax M2.1** | **9.5** | 45 sec | subscription | ✅ | 0 |
-| **Kimi-K2.5** | **9.5** | 1:25 | subscription | ✅ | 0 |
-| Claude Sonnet 4.5 | 8.5 | ~1 min | ~$0.30 | ✅* | 0 |
-| Claude Haiku 4.5 | 6.0 | 3–4 min | ~$0.05 | ❌ | 3 |
-| Qwen3-Coder-480B | 4.5 | 1:30 | subscription | ❌ | 1 |
-| Qwen3-235B-Instruct | 2.5 | 10+ min | subscription | ❌ | 6+ |
-| DeepSeek-V3.2 | 0 | hung | subscription | — | 3 |
-
-*Sonnet couldn't attach the file natively, so it wrote a custom Python SMTP script. Resourceful, but overkill.
-
 ## Quick Model Breakdown
 
 **MiniMax M2.1** — Fastest open-weight model (45 sec), everything done in one pass. The only model that reported rain with thunder — and it was right (more on that below). Email with attachment via native tools, zero questions asked.
@@ -87,6 +74,32 @@ Evaluated by me, with Claude Opus as co-judge.
 **Qwen3-235B-Instruct** — Worst UX: 10 minutes of constant babysitting. The model kept saying "one second...", hanging, requiring nudges. Delivered a file missing the wind field, email without attachment, and recommended an umbrella when the weather code said "partly cloudy." Created an illusion of progress with no actual output.
 
 **DeepSeek-V3.2** — Silently hung after retrieving weather data. Three user pings ignored. Task abandoned.
+
+## Results
+
+| Model | Score | Time | Cost | Email w/ Attachment | User Nudges |
+|-------|-------|------|------|:---:|:---:|
+| **Claude Opus 4.5** | **9.5** | 25 sec | ~$0.43 | ✅ | 0 |
+| **MiniMax M2.1** | **9.5** | 45 sec | subscription | ✅ | 0 |
+| **Kimi-K2.5** | **9.5** | 1:25 | subscription | ✅ | 0 |
+| Claude Sonnet 4.5 | 8.5 | ~1 min | ~$0.30 | ✅* | 0 |
+| Claude Haiku 4.5 | 6.0 | 3–4 min | ~$0.05 | ❌ | 3 |
+| Qwen3-Coder-480B | 4.5 | 1:30 | subscription | ❌ | 1 |
+| Qwen3-235B-Instruct | 2.5 | 10+ min | subscription | ❌ | 6+ |
+| DeepSeek-V3.2 | 0 | hung | subscription | — | 3 |
+
+*Sonnet couldn't attach the file natively, so it wrote a custom Python SMTP script. Resourceful, but overkill.
+
+## Model Files
+
+- **Claude Opus 4.5** — [claude-opus-4.5.md](claude-opus-4.5.md)
+- **Claude Sonnet 4.5** — [claude-sonnet-4.5.md](claude-sonnet-4.5.md)
+- **Claude Haiku 4.5** — [claude-haiku-4.5.md](claude-haiku-4.5.md)
+- **MiniMax M2.1** — [minimax-m2.1.md](minimax-m2.1.md)
+- **Kimi-K2.5** — [kimi-k2.5.md](kimi-k2.5.md)
+- **Qwen3-Coder-480B** — [qwen3-coder-480b.md](qwen3-coder-480b.md)
+- **Qwen3-235B-Instruct** — [qwen3-235b-instruct.md](qwen3-235b-instruct.md)
+- **DeepSeek-V3.2** — [deepseek-v3.2.md](deepseek-v3.2.md)
 
 ## What I Learned
 
@@ -111,16 +124,3 @@ Detailed results for each model (exact outputs, scoring breakdowns, behavioral n
 ---
 
 *Methodology: Each model tested in a clean session with the same prompt. Platform: OpenClaw with weather API, filesystem, and email tools (himalaya, gog CLI). Evaluation: author + Claude Opus 4.5 co-judge. Filesystem was shared between runs — artifacts from one model may have been available to the next.*
-
-
-## Results
-
-## Model Files
-- **Claude Opus 4.5** — [claude-opus-4.5.md](claude-opus-4.5.md)
-- **Claude Sonnet 4.5** — [claude-sonnet-4.5.md](claude-sonnet-4.5.md)
-- **Claude Haiku 4.5** — [claude-haiku-4.5.md](claude-haiku-4.5.md)
-- **MiniMax M2.1** — [minimax-m2.1.md](minimax-m2.1.md)
-- **Kimi-K2.5** — [kimi-k2.5.md](kimi-k2.5.md)
-- **Qwen3-Coder-480B** — [qwen3-coder-480b.md](qwen3-coder-480b.md)
-- **Qwen3-235B-Instruct** — [qwen3-235b-instruct.md](qwen3-235b-instruct.md)
-- **DeepSeek-V3.2** — [deepseek-v3.2.md](deepseek-v3.2.md)
