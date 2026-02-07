@@ -32,7 +32,6 @@ Mixed-language prompt: "Write an email in English to colleague Andrey summarizin
 **Task 5: Multi-tool orchestration**
 "Search the web for model benchmarks, check Google Drive for previous test results, and create a comparison table from both sources."
 
-Full descriptions of tasks 2–5 with scoring criteria are in the [GitHub repo](link).
 
 ## Task 1: What the Models Actually Did
 
