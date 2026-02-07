@@ -32,7 +32,6 @@ Mixed-language prompt: "Write an email in English to colleague Andrey summarizin
 **Task 5: Multi-tool orchestration**
 "Search the web for model benchmarks, check Google Drive for previous test results, and create a comparison table from both sources."
 
-
 ## Task 1: What the Models Actually Did
 
 Each model received the same prompt in a clean session (no prior context):
@@ -57,7 +56,6 @@ This tests everything an agent needs: API data retrieval, processing, file creat
 
 Evaluated by me, with Claude Opus as co-judge.
 
-## Results
 
 | Model | Score | Time | Cost | Email w/ Attachment | User Nudges |
 |-------|-------|------|------|:---:|:---:|
@@ -113,3 +111,16 @@ Detailed results for each model (exact outputs, scoring breakdowns, behavioral n
 ---
 
 *Methodology: Each model tested in a clean session with the same prompt. Platform: OpenClaw with weather API, filesystem, and email tools (himalaya, gog CLI). Evaluation: author + Claude Opus 4.5 co-judge. Filesystem was shared between runs — artifacts from one model may have been available to the next.*
+
+
+## Results
+
+## Model Files
+- **Claude Opus 4.5** — [claude-opus-4.5.md](claude-opus-4.5.md)
+- **Claude Sonnet 4.5** — [claude-sonnet-4.5.md](claude-sonnet-4.5.md)
+- **Claude Haiku 4.5** — [claude-haiku-4.5.md](claude-haiku-4.5.md)
+- **MiniMax M2.1** — [minimax-m2.1.md](minimax-m2.1.md)
+- **Kimi-K2.5** — [kimi-k2.5.md](kimi-k2.5.md)
+- **Qwen3-Coder-480B** — [qwen3-coder-480b.md](qwen3-coder-480b.md)
+- **Qwen3-235B-Instruct** — [qwen3-235b-instruct.md](qwen3-235b-instruct.md)
+- **DeepSeek-V3.2** — [deepseek-v3.2.md](deepseek-v3.2.md)
